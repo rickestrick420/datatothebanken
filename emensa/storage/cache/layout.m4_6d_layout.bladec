@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+ <title>Layout Page: <?php echo $this->yieldContent('title'); ?></title>
+ <style>
+ .grid-container{
+ display: grid;
+ grid-template-columns: 15% auto;
+ grid-template-rows: 20% auto;
+ gap: 20px;
+
+ grid-template-areas:
+ "header header"
+ " sidebar main"
+ "footer footer"
+ ;
+ }
+ .header{
+ grid-area: header;
+ border: solid 5px red;
+ }
+ .main{
+ grid-area: main;
+ border: solid 5px red;
+ }
+ .sidebar{
+ border: solid 5px red;
+ grid-area: sidebar;
+ }
+ .footer{
+ grid-area: footer;
+ border: solid 5px red;
+ }
+ </style>
+</head>
+
+<div class="grid-container">
+
+<div class="header">
+<?php $this->startSection('header'); ?>
+ <?php echo $this->yieldSection(); ?>
+</div>
+
+ <div class="main">
+ <?php $this->startSection('main'); ?>
+ <?php echo $this->yieldSection(); ?>
+ </div>
+
+ <div class="sidebar">
+ <?php $this->startSection('sidebar'); ?>
+ <?php echo $this->yieldSection(); ?>
+ </div>
+
+
+<div class="footer">
+ <?php $this->startSection('footer'); ?>
+ <?php echo $this->yieldSection(); ?>
+</div>
+</div>
+</html>

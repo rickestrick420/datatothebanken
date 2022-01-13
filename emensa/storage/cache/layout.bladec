@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="DE">
+<head>
+ <meta charset="utf-8">
+ <title>E-Mensa</title>
+ <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+ <?php echo $this->yieldContent('topper'); ?>
+ <?php echo $this->yieldContent('menu_links'); ?>
+ <?php echo $this->yieldContent('a1'); ?>
+
+<div class="inhalt">
+
+ <?php echo $this->yieldContent('text'); ?>
+ <?php echo $this->yieldContent('gerichte'); ?>
+ <?php echo $this->yieldContent('allergene'); ?>
+ <?php echo $this->yieldContent('text2'); ?>
+
+</div>
+
+
+<div class="foot">
+ <?php echo $this->yieldContent('impressum'); ?>
+
+</div>
+<script>
+ if ( window.history.replaceState ) {
+ window.history.replaceState( null, null, window.location.href );
+ }
+</script>
+</body>
+
+</html>

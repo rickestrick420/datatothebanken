@@ -1,0 +1,50 @@
+<!--
+ - Praktikum DBWT. Autoren:
+ - Ben, Salomon, 3232880
+ - Egzon Tatari, 3235721
+-->
+
+Aufgabe 8)
+
+1)
+ALTER TABLE gericht_hat_kategorie ADD CONSTRAINT UNIQUE
+(gericht_id,kategorie_id);
+
+2)
+CREATE  FULLTEXT INDEX idx_gericht_name 
+on gericht(name);
+
+3)
+------------------------------------- 
+SELECT TABLE_NAME,
+    COLUMN_NAME,
+    CONSTRAINT_NAME,
+    REFERENCED_TABLE_NAME,
+    REFERENCED_COLUMN_NAME
+FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+where REFERENCED_TABLE_NAME is not Null;
+------------------------------
+Erhalte alle FOREIGN KEYS
+"wunschgerichte_ibfk_1"
+-------------------------------------------
+
+ALTER TABLE gericht_hat_kategorie 
+ADD CONSTRAINT FOREIGN KEY
+gericht_hat_kategorie_fk1 (gericht_id) REFERENCES gericht(id) on DELETE CASCADE;
+
+ALTER TABLE gericht_hat_allergen 
+ADD CONSTRAINT FOREIGN KEY gericht_hat_allergen_fk1 (gericht_id) REFERENCES
+gericht(id) ON DELETE CASCADE;
+
+--------------------------------------------------
+4)
+ALTER TABLE gericht_hat_kategorie ADD CONSTRAINT FOREIGN KEY kategorie_fk1 (kategorie_id) REFERENCES kategorie(id);
+----------------------------------------------------
+5)
+ALTER TABLE gericht_hat_allergen 
+ADD CONSTRAINT FOREIGN KEY gericht_hat_allergen_ibfk_1 (CODE) REFERENCES allergen(CODE) ON UPDATE CASCADE;
+------------------------------------------------------
+6)
+ALTER TABLE gericht_hat_kategorie
+ADD CONSTRAINT PK_gericht_hat_kategorie PRIMARY KEY (kategorie_id,gericht_id); 
+------------------------------------------------------------

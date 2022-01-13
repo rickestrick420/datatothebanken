@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<?php $this->startSection('content'); ?>
+ <head>
+ <meta charset="UTF-8">
+ <title><?php echo $this->yieldContent('title'); ?></title>
+ </head>
+ <?php $this->stopSection(); ?>
+<?php $this->startSection('header'); ?>
+ <h1>Anmeldung</h1>
+ <?php echo $this->yieldContent('header'); ?>
+ <body>
+ <?php $this->stopSection(); ?>
+ <div class="grid-container">
+ <div class="gridbox logo">
+ <div>
+ <img src="img/logo.png" alt="Logo" class="logo">
+ </div>
+ </div>
+ <?php echo $this->yieldContent('content'); ?>
+
+ <?php echo $this->yieldContent('anm'); ?>
+
+</html>
+
+
+

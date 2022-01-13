@@ -1,0 +1,74 @@
+.mensaLogo{
+    float: left;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10%;
+    background: #38dcd5;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+.menu_links{
+    border: 1px solid black;
+    font-family: Bahnschrift;
+    font-size: x-large;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background: #698888;
+    margin-right: 10%;
+    margin-left: 1%;
+    margin-top: 10px;
+    text-align: center;
+
+}
+.menu_links > a{
+    color: cyan;
+    margin-left: 30px;
+}
+
+body{
+    border: 5px solid black;
+    border-radius: 10px;
+    background: #a8d3f1;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.topper{
+    display: grid;
+    grid-template-columns: 10% auto;
+}
+
+.inhalt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.foot{
+    margin: 15px 0;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+.footer1{
+    margin-left: 30px;
+    padding: 5px 5px 5px 30px;
+    border-left: 3px solid #38dcd5;
+
+}
+
+.Hervorgehoben{
+    background-color: aqua;
+    text-decoration-line: underline;
+
+}

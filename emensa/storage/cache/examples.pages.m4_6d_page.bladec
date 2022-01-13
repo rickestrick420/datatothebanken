@@ -1,0 +1,21 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('title','1'); ?>
+
+<?php $this->startSection('header'); ?>
+ <h1>Willkommen auf Seite 1</h1>
+<?php $this->stopSection(); ?>
+<?php $this->startSection('sidebar'); ?>
+ <ul>
+ <li>Photos</li>
+ <li>Videos</li>
+ <li>Musik</li>
+ <li>Dokumente</li>
+ </ul>
+<?php $this->stopSection(); ?>
+<?php $this->startSection('main'); ?>
+ <h2>Main von Seite 1</h2>
+<?php $this->stopSection(); ?>
+<?php $this->startSection('footer'); ?>
+ <a href="http://bitly.com/98K8eH">Impressum</a> | Seite 1 | Ben und Egzon
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild("layout.m4_6d_layout"); } ?>

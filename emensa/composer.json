@@ -1,0 +1,10 @@
+{
+    "name": "emensa/mvc",
+    "require": {
+        "eftec/bladeone": "^4.1",
+        "ext-mysqli": "*",
+        "monolog/monolog": "^2.0",
+        "illuminate/database": "*"
+    }
+
+}
